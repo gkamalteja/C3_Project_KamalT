@@ -36,27 +36,6 @@ class RestaurantTest {
 
     }
 
-
-    @Test
-    public void checkTotalPricePass(){
-        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
-        restaurant.addToMenu("Sweet corn soup",200);
-        restaurant.addToMenu("Vegetable lasagne", 200);
-        int totalExpected = restaurant.getTotalPrice(restaurant.getMenu());
-        assertEquals(totalExpected,400);
-    }
-
-    @Test
-    public void checkTotalPriceFail(){
-        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
-        restaurant.addToMenu("Sweet corn soup",200);
-        restaurant.addToMenu("Vegetable lasagne", 200);
-        int totalExpected = restaurant.getTotalPrice(restaurant.getMenu());
-        assertNotEquals(totalExpected,300);
-    }
-
-
-
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
