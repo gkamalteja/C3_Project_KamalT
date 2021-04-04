@@ -35,6 +35,15 @@ class RestaurantTest {
         assertEquals(isAvailable,false);
 
     }
+    //Pass test case for TDD feature
+    @Test
+    public void checkTotalPricePass(){
+        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant.addToMenu("Sweet corn soup",200);
+        restaurant.addToMenu("Vegetable lasagne", 200);
+        int totalExpected = restaurant.getTotalPrice(restaurant.getMenu());
+        assertEquals(totalExpected,400);
+    }
     //Failure test case for TDD feature
     @Test
     public void checkTotalPriceFail(){
